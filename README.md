@@ -12,7 +12,7 @@ struct _Base{
 };
 
 struct _SubClass{
-  Base Base;
+  Base Base;           //first field is the Object it extends (its super class) it has the same name as the type.
   double extraField;
 };
 
