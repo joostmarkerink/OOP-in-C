@@ -23,8 +23,15 @@ AbstractBase *Subclass_create   (unsigned int size){ return Base_create(size==0 
 const char *  Base_getName      (Base *base){ return base->name; }
 
 bool Subclass_nameIsJohn (Subclass *subclass){
+   //call function with "Subclass" as "Base"
    const char *myName = Base_getName(&subclass->Base);
+   
    return strcmp(myName,"John")==0;
 }
+
+// Base *myBase = (Base *)mySubclassObject
+// is the same as
+// Base *myBase = &mySubclassObject->Base;
+
 
 ```
