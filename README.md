@@ -18,7 +18,11 @@ struct SubClass{
 
 
 AbstractBase *Base_create       (unsigned int size);
-AbstractBase *Subclass_create   (unsigned int size){ return Base_create(size==0 ? sizeof(Subclass) : size); }
+AbstractBase *Subclass_create   (unsigned int size){ 
+   
+   return Base_create(size==0?sizeof(Subclass):size);
+
+}
 
 const char *  Base_getName      (Base *base){ return base->name; }
 
