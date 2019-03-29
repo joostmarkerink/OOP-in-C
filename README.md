@@ -3,7 +3,7 @@ My rules for OOP in C
 
 ```c
 typedef struct Base Base;
-typedef struct Subclass SubClass;
+typedef struct Subclass Subclass;
 typedef void AbstractBase;
 typedef void AbstractSubclass;
 
