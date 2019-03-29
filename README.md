@@ -17,17 +17,17 @@ struct SubClass{
 };
 
 
-AbstractBase *Base_create       (unsigned int size){
+AbstractBase *Base_create(unsigned int size){
    return malloc(size==0?sizeof(Base):size);
 }
 
-AbstractBase *Subclass_create   (unsigned int size){ 
-   
+AbstractBase *Subclass_create(unsigned int size){
    return Base_create(size==0?sizeof(Subclass):size);
-
 }
 
-const char *  Base_getName      (Base *base){ return base->name; }
+const char *  Base_getName(Base *base){
+   return base->name;
+}
 
 bool Subclass_nameIsJohn (Subclass *subclass){
    //call function with "Subclass" as "Base"
