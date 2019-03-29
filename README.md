@@ -1,17 +1,17 @@
 # OOP-in-C
 My rules for OOP in C
 
-```javascript
-typedef struct _Base Base;
-typedef struct _Subclass SubClass;
+```c
+typedef struct Base Base;
+typedef struct Subclass SubClass;
 typedef void AbstractBase;
 typedef void AbstractSubclass;
 
-struct _Base{
+struct Base{
   const char *name;
 };
 
-struct _SubClass{
+struct SubClass{
   Base Base;           //first field is the Object it extends (its super class) it has the same name as the type.
   double extraField;
 };
